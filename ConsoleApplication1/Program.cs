@@ -48,26 +48,42 @@ namespace ConsoleApplication1
              {
                  Console.WriteLine(i);
              }*/
-            string[] name = { "张三", "李四", "王五" };
-            try 
-            {
-               
+            /*  string[] name = { "张三", "李四", "王五" };
+              try 
+              {
 
-                for (int i = 0; i < 6; i++)
-                {
-                    Console.WriteLine(name[i]);
-                }
+
+                  for (int i = 0; i < 6; i++)
+                  {
+                      Console.WriteLine(name[i]);
+                  }
+              }
+              catch (IndexOutOfRangeException ex)
+              {
+
+                  Console.WriteLine(ex.Message);
+              }
+              finally
+              {
+                  Console.WriteLine(name[0]);
+              }*/
+
+            int a = 0;
+            try
+            {
+                a = int.Parse("2");
+                a = a / 0;
             }
-            catch (IndexOutOfRangeException ex)
+            catch (Exception ex)
             {
 
                 Console.WriteLine(ex.Message);
             }
             finally
             {
-                Console.WriteLine(name[0]);
+                Console.WriteLine(a);
             }
-
+          
 
         }
     }
