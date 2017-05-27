@@ -49,8 +49,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\webjob-publish-settings.json" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="#%5CYiChang%5Cpackages%5CMicrosoft.Web.WebJobs.Publish.1.0.7%5Ctools%5Cwebjobs.targets" Condition="Exists('#%5CYiChang%5Cpackages%5CMicrosoft.Web.WebJobs.Publish.1.0.7%5Ctools%5Cwebjobs.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

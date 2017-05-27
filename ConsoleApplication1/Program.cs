@@ -68,22 +68,66 @@ namespace ConsoleApplication1
                   Console.WriteLine(name[0]);
               }*/
 
-            int a = 0;
+            /*   int a = 0;
+               try
+               {
+                   a = int.Parse("2");
+                   a = a / 0;
+               }
+               catch (Exception ex)
+               {
+
+                   Console.WriteLine(ex.Message);
+               }
+               finally
+               {
+                   Console.WriteLine(a);
+               }*/
+
+
+
+            //checked和unchecked
+            /*   short num1 = 999;
+               byte num2 = 0;
+               try
+               {
+                   num2 = unchecked((byte)num1);
+                   //   string str = num2.ToString();
+                   int num3 = num2 / 0;
+               }
+               catch (OverflowException ex)
+               {
+
+                   Console.WriteLine(ex.Message);
+               }
+               catch (Exception ex)
+               {
+                   Console.WriteLine(ex.Message);
+               }
+               finally
+               {
+                   Console.WriteLine(num2);
+               }*/
+
+            byte a, b, result;
+            a = 253;b = 3;
             try
             {
-                a = int.Parse("2");
-                a = a / 0;
+                unchecked
+                {
+                    result = (byte)(a + b);
+                    Console.WriteLine(result);
+                    checked
+                    {
+
+                    }
+                }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
-                Console.WriteLine(ex.Message);
+                throw;
             }
-            finally
-            {
-                Console.WriteLine(a);
-            }
-          
 
         }
     }
